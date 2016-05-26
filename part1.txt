@@ -1,4 +1,4 @@
-part1 - prototype inheritance using functions-constructors
+// part1 - prototype inheritance using functions-constructors
 
 function Animal(age, name, sound, region) {
 	this.name = name;
@@ -14,7 +14,7 @@ function Dog(age, name, sound, region) {
 	Animal.apply(this, arguments);
 	
 	this.goAway = function() {
-		return "The animal called " + this.name + " goes away.";
+		return "The " + this.constructor.name + " called " + this.name + " runs away.";
 	}
 }
 
@@ -22,7 +22,7 @@ function Cat(age, name, sound, region) {
 	Animal.apply(this, arguments);
 	
 	this.goAway = function() {
-		return "The animal called " + this.name + " goes away.";
+		return "The " + this.constructor.name + " called " + this.name + " jumps away.";
 	}
 }
 
@@ -30,7 +30,7 @@ function Woodpecker(age, name, sound, region) {
 	Animal.apply(this, arguments);
 	
 	this.goAway = function() {
-		return "The animal called " + this.name + " goes away.";
+		return "The " + this.constructor.name + " called " + this.name + " flies away.";
 	}
 }
 
