@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>GOODS</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body class="container">
+<header>
+    <h1>BINARY STUDIO - TASK 2</h1>
+
+    <h2>List of Goods</h2>
+</header>
+<main>
+    <div class="new-item">
+        <input class="add-item" type="text" placeholder="Add new item"/>
+    </div>
+    <div class="manage-items">
+        <p class="check-all" data-action="checkAll">
+            <span class="glyphicon glyphicon-check"></span>
+            <span>Check all items</span>
+        </p>
+        <p class="delete-all" data-action="deleteChecked">
+            <span class="glyphicon glyphicon-remove-sign"></span>
+            <span>Delete all checked items</span>
+        </p>
+    </div>
+    <div class="items">
+        <ul class="item-list">
+        </ul>
+    </div>
+</main>
+<script type="text/javascript">
+    Application.init(document);
+</script>
+</body>
+</html>

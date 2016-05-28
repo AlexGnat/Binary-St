@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+main {
+    font-size: 16px;
+}
+
+.new-item, .manage-items, .items {
+    margin: 20px auto;
+}
+
+.manage-items p {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.glyphicon {
+    font-size: 20px;
+    cursor: pointer;
+    top: 3px;
+    margin:0 5px;
+}
+
+.check-all, .delete-all {
+    margin-top:10px;
+}
+
+.item-list {
+    list-style-type: none;
+}
+
+.item {
+    padding: 5px;
+    width: 300px;
+    display:block;
+}
+
+.delete-item {
+    float:right;
+    color: palevioletred;
+    display:none;
+}
+
+.item:hover .delete-item {
+    display:inline-block;
+}
+
+.check-item {
+    color: darkslategray;
+}
+
+.checked .check-item {
+    color: darkseagreen;
+}
+
+.checked {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.check-all .glyphicon {
+    color: darkseagreen;
+}
+
+.delete-all .glyphicon {
+    color: palevioletred;
+}
