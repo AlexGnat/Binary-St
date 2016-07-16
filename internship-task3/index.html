@@ -1,79 +1,215 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Task 2</title>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Астрология</title>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <header class="header">
-    <div class="header__flex-wrapper">
-        <div class="header__image">
-            <img src="img/Coca-Cola_logo.jpg" alt="Coca-Cola logo"/>
-        </div>
-        <div class="header__text">
-            <span>Some text vertically aligned</span>
-        </div>
+    <div class="header__image">
+        <img src="img/zodiac.png" alt="zodiac"/>
+    </div>
+    <div class="header__title">
+        Знаки Зодиака и стихии
+    </div>
+    <div class="header__search">
+        <span class="fa fa-search"></span>
+        <input placeholder="Поиск">
     </div>
 </header>
-<main class="main">
-    <section class="menu">
-        <ul class="menu__list">
-            <li class="menu__item">MENU ITEM TEXT</li>
-            <li class="menu__item">MENU ITEM TEXT</li>
-            <li class="menu__item">MENU ITEM TEXT</li>
-            <li class="menu__item">MENU ITEM TEXT</li>
-            <li class="menu__item">MENU ITEM TEXT</li>
+<nav class="menu">
+    <ul class="menu__list">
+        <li class="menu__item">
+            <a href="#">Знаки Зодиака</a>
+        </li>
+        <li class="menu__item">
+            <a href="elements.html">Стихии</a>
+        </li>
+    </ul>
+</nav>
+<div class="content">
+    <aside class="aside">
+        <ul class="switcher">
+            <li class="switcher__item">
+                <a href="#aries">Овен</a>
+            </li>
+            <li class="switcher__item">
+                <a href="#taurus">Телец</a>
+            </li>
+            <li class="switcher__item">
+                <a href="#gemini">Близнецы</a>
+            </li>
+            <li class="switcher__item">
+                <a href="#cancer">Рак</a>
+            </li>
+            <li class="switcher__item">
+                <a href="#leo">Лев</a>
+            </li>
+            <li class="switcher__item">
+                <a href="#virgo">Дева</a>
+            </li>
+            <li class="switcher__item">
+                <a href="">Весы</a>
+            </li>
+            <li class="switcher__item">
+                <a href="">Скорпион</a>
+            </li>
+            <li class="switcher__item">
+                <a href="">Стрелец</a>
+            </li>
+            <li class="switcher__item">
+                <a href="">Козерог</a>
+            </li>
+            <li class="switcher__item">
+                <a href="">Водолей</a>
+            </li>
+            <li class="switcher__item">
+                <a href="">Рыбы</a>
+            </li>
         </ul>
-    </section>
-    <section class="content">
-        <div class="content__upper">
-            <div class="content__upper-row">
-                <div class="content__upper-block">
-                   <span>CENTERED DATA</span>
+    </aside>
+    <main class="main">
+        <div class="signs">
+            <article class="signs__item" id="aries">
+                <div class="signs__name">
+                    Овен
                 </div>
-                <div class="content__upper-block">
-                    <span>CENTERED DATA</span>
+                <div class="signs__dates">
+                    21.03 - 20.04
                 </div>
-                <div class="content__upper-block">
-                    <span>CENTERED DATA</span>
+                <div class="signs__desc">
+                    <p class="signs__image">
+                        <img src="img/aries.gif" alt="aries"/>
+                    </p>
+                    <p>
+                        Стихия - Огонь
+                    </p>
+                    <p>
+                        Весеннее равноденствие 21 марта - начало нового зодиакального года, и Овен, первый из знаков зодиака, является тем самым началом начал, знаком всего нового, знаком возрождения.
+                    </p>
+                    <p>
+                        Овен является предприимчивым, честолюбивым, импульсивным, восторженным и полным энергии человеком. Овен - пионер и в мысли и действии, очень открытый для новых идей, свободолюбивый человек. Такие люди приветствуют вызовы судьбы, и не будут отклоняться от намеченной цели. Овны - прирожденные, храбрые лидеры, обладающие подлинным беспокойством о тех, кем они руководят, однако они не будут смущаться использовать подчиненных, в достижении собственных целей. Как подчиненные, Овны могут доставлять своим руководителям множество неприятностей, такие люди склонны к необдуманным поступкам, неумеренны в выражении своих мыслей и эмоций. Огромная энергия обладателей знака Овен, делает их агрессивными и беспокойными, упорными и быстрыми в делах, и способными к явному показу своего недовольства, если они чувствуют себя оскорбленными.
+                    </p>
                 </div>
-            </div>
-            <div class="content__upper-row">
-                <div class="content__upper-block">
-                    <span>CENTERED DATA</span>
+            </article>
+            <article class="signs__item" id="taurus">
+                <div class="signs__name">
+                    Телец
                 </div>
-                <div class="content__upper-block">
-                    <span>CENTERED DATA</span>
+                <div class="signs__dates">
+                    21.04 - 20.05
                 </div>
-                <div class="content__upper-block">
-                    <span>CENTERED DATA</span>
+                <div class="signs__desc">
+                    <p class="signs__image">
+                        <img src="img/taurus.gif" alt="taurus"/>
+                    </p>
+                    <p>
+                        Стихия - Земля
+                    </p>
+                    <p>
+                        Под прохладной и собранной внешностью, Тельцы очень отличаются от всех других знаков Зодиака. Тельцы умеют отстраняться от толпы и оставаться выше общественного мнения, и это притом, что они имеют заслуженную репутацию общительных и приятных в разговоре людей.
+                    </p>
+                    <p>
+                        Люди, рожденные в знаке Тельца, великодушно позволяют другим быть в их присутствии, однако не подпускают к себе никого, кто бы мог по настоящему проникнуться их душой, Тельцы гораздо комфортней чувствуют себя, оставаясь загадкой для своего окружения. Общаясь с такими людьми очень легко обнаружить некоторую степень отчужденности с их стороны или полное нежелание воспринимать чужие идеи - это как разговаривать с деревом, вы говорите, приводите доводы в поддержку своей теории, но Телец, как скала, не подает ни малейшего знака на убедительность вашего монолога.
+                    </p>
                 </div>
-            </div>
+            </article>
+            <article class="signs__item" id="gemini">
+                <div class="signs__name">
+                    Близнецы
+                </div>
+                <div class="signs__dates">
+                    21.05 - 20.06
+                </div>
+                <div class="signs__desc">
+                    <p class="signs__image">
+                        <img src="img/gemini.gif" alt="gemini"/>
+                    </p>
+                    <p>
+                        Стихия - Воздух
+                    </p>
+                    <p>
+                        В древней греческой мифологии, правитель Близнецов - Меркурий, был посыльным богов, способным пересекать небеса за мгновение ока, возможно именно это объясняет, почему рожденные под знаком Близнецов всегда в движении, измученные неутолимой жаждой знания и новых событий. Неизлечимо любопытные, а иногда даже вредные и капризные, Близнецы - многогранные натуры, которые любят знать немного обо всем, но вообще не слишком много об одной конкретной теме, на самом деле, лишь разнообразие является их целью жизни.
+                    </p>
+                    <p>
+                        В астрологии, Близнецы завоевали репутацию неудержимых болтунов способных продолжать свой монолог часами, те же Близнецы кто лишен такого дара, обычно становятся прекрасными писателями либо имеют особый талант в постижении иностранных языков и т.п. В любви Близнецы предпочитают партнера, который может не отставать от них ни духовно, ни физически.
+                    </p>
+                </div>
+            </article>
+            <article class="signs__item" id="cancer">
+                <div class="signs__name">
+                    Рак
+                </div>
+                <div class="signs__dates">
+                    21.06 - 22.07
+                </div>
+                <div class="signs__desc">
+                    <p class="signs__image">
+                        <img src="img/cancer.gif" alt="cancer"/>
+                    </p>
+                    <p>
+                        Стихия - Вода
+                    </p>
+                    <p>
+                        Рожденные под знаком Рака люди, которыми управляет таинственная Луна, являются одной из загадок зодиака. Справедливо сказать, что большинство Раков являются целой связкой невообразимых противоречий. Сострадательные и заботящиеся о друзьях, семье и о своих любимых Раки, все же могут довести любого до нервного срыва своими ревностными замечаниями и практически никогда не прекращающимися капризами.
+                    </p>
+                    <p>
+                        Привлекательно-эксцентричные с одной стороны, Раки экстремально ревностно относятся к тому, как они выглядят в обществе и в глазах других. Как и их астрологический символ, Раки могут казаться твердыми, черствыми и нечувствительными к окружению, однако, под толстым панцирем находится мягкое, чувственное и нежное создание. В конце концов, все Раки - дети Луны, покровительницы всех влюбленных.
+                    </p>
+                </div>
+            </article>
+            <article class="signs__item" id="leo">
+                <div class="signs__name">
+                    Лев
+                </div>
+                <div class="signs__dates">
+                    23.07 - 22.08
+                </div>
+                <div class="signs__desc">
+                    <p class="signs__image">
+                        <img src="img/leo.gif" alt="leo"/>
+                    </p>
+                    <p>
+                        Стихия - Огонь
+                    </p>
+                    <p>
+                        Харизматический, всегда позитивный, не желающий идти на поводу у других Лев, привлекает не только изобилие друзей и возможностей, но и умеет пережить бурные времена жизни со свойственным только ему стилем и хорошим настроением. Каждый Лев рождается с удачей в руках, как любовь побеждает все невзгоды. Лев, которым управляет сердце, способен преодолеть любые жизненные трудности и, достигнув цели, двинуться еще дальше, как и все прирожденные лидеры, они не знают покоя.
+                    </p>
+                    <p>
+                        Как только Лев вступает в отношения с другим человеком, которому целиком и полностью доверяет, он полностью посвящен и предан ему. С такими людьми трудно ладить, но если вы добились их благосклонности не стоит испытывать ваши взаимоотношения на прочность, если Лев заподозрит обман или будет предан, он никогда не забудет нанесенной обиды, отомстит при первом представившемся случае, и он крайне редко меняет свое мнение о человеке однажды показавшем свое истинное я.
+                    </p>
+                </div>
+            </article>
+            <article class="signs__item" id="virgo">
+                <div class="signs__name">
+                    Дева
+                </div>
+                <div class="signs__dates">
+                    23.08 - 23.09
+                </div>
+                <div class="signs__desc">
+                    <p class="signs__image">
+                        <img src="img/virgo.gif" alt="virgo"/>
+                    </p>
+                    <p>
+                        Стихия - Земля
+                    </p>
+                    <p>
+                        В классическом понимании астрологии, Дева описывается как меркантильная, суетливая и ограниченная личность. Но когда Дева сияет, фактически нет никакого другого знака зодиака, способного хоть как-то соответствовать их внутреннему свету. В мелодии души Девы обитает наслаждение, усталому путнику там уготовано счастье и покой. И когда Дева уверенна в своих силах и чувствует силу своих способностей, такие люди становятся самыми успешными и творческими из числа всех знаков.
+                    </p>
+                    <p>
+                        Если задаться целью, то с легкостью можно обнаружить множество людей рожденных под знаком Девы работающими в сфере услуг, в благотворительности, многие из них будут учителями и докторами, а возможно целителями специализирующихся на массаже или на лечении посредством лекарственных трав.
+                    </p>
+                </div>
+            </article>
         </div>
-        <div class="content__bottom">
-            <div class="content__bottom-block">
-                <div class="content__bottom-item">
-                    <span>CENTERED VERTICALLY DATA</span>
-                </div>
-            </div>
-            <div class="content__bottom-block">
-                <div class="content__bottom-item">
-                    <span>CENTERED VERTICALLY DATA</span>
-                </div>            </div>
-            <div class="content__bottom-block">
-                <div class="content__bottom-item">
-                    <span>CENTERED VERTICALLY DATA</span>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+    </main>
+</div>
 <footer class="footer">
-    <div class="footer__upper">
-
-    </div>
-    <div class="footer__bottom">
-
+    <div class="footer__copyright">
+        <span>Binary Studio - Hometask 3</span>
+        <span>Alexander Gnatenko</span>
     </div>
 </footer>
 </body>
