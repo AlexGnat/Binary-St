@@ -1,8 +1,11 @@
 1. Написать запрос для поиска всех студентов, у которых score > 87% и < 93% по любому из типов выполненных заданий.
-
+db.results.find({scores: {$elemMatch: {score: {$gt: 87, $lt: 93}}}})
+//я так понял задание, что если есть хотя бы один score, удовлетворяющий заданному условию, то нужно показать эту запись
 
 2. Написать запрос-агрегацию для выборки всех студентов, у которых результат по экзамену (type: "exam") 
 более 90% (использование unwind)
-
+db.results.aggregate([ { $unwind: "$scores"}, { $match: { "scores.type": "exam"} }, { $group: { _id: "$_id", avgScore: {$avg: "scores.score"}} },
+	{$project: {"avgScore": 1}}, { $match: {"avgScore": {$gt: 90}}}])
 
 3. Студентам с именем Dusti Lemmond добавить поле “accepted” со значением true.
+db.results.update({name: "Dusti Lemmond"}, {$set: { "accepted": true}}, {multi: true})
