@@ -1,0 +1,12 @@
+
+.user-item {
+    list-style-type: none;
+    margin:5px 10px;
+    font-size: 20px;
+}
+
+.user-delete {
+    cursor: pointer;
+    margin-left: 10px;
+    color: red;
+}

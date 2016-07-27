@@ -1,0 +1,19 @@
+.users {
+    max-width: 800px;
+    border: 1px solid black;
+    background: lightgoldenrodyellow;
+}
+
+.users-title {
+    font-size: 26px;
+    text-align: center;
+}
+
+.users-body {
+    display: flex;
+}
+
+.user-left, .user-right {
+    flex-grow: 1;
+    flex-shrink: 1;
+}

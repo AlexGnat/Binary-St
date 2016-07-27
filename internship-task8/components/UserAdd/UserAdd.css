@@ -1,0 +1,10 @@
+.user-add {
+    border: 1px dotted black;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.user-add button {
+    margin-left: 15px;
+}
