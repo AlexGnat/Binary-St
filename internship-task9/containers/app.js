@@ -4,9 +4,13 @@ import UserList from '../components/UserList/UserList'
 
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
-            <UserList></UserList>
+           <UserList></UserList>
         )
     }
 }

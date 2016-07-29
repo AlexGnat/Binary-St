@@ -13,7 +13,12 @@
     display: flex;
 }
 
-.user-left, .user-right {
+.user-left {
+    flex-grow: 2;
+    flex-shrink: 1;
+}
+
+.user-right {
     flex-grow: 1;
     flex-shrink: 1;
 }

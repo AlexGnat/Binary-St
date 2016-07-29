@@ -13,7 +13,7 @@ import reducer from './reducers/userListReducer';
 
 const middleware = process.env.NODE_ENV === 'production' ?
     [ thunk ] :
-    [ thunk, logger() ]
+    [ thunk, logger() ];
 
 const store = createStore(
     reducer,
@@ -21,9 +21,8 @@ const store = createStore(
 );
 
 render(
-    (<Router history={browserHistory}>
-        <Route path="/" component={App}>
-        </Route>
-    </Router>)
+    (<Provider store={store}>
+        <App></App>
+    </Provider>)
     , document.getElementById('root')
 );

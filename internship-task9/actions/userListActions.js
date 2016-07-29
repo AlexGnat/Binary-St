@@ -1,7 +1,6 @@
 export function addUser(user) {
     const action = {
-        type: 'ADD_USER',
-        user: user
+        type: 'ADD_USER'
     };
     return action;
 }
@@ -14,11 +13,18 @@ export function deleteUser(user) {
     return action;
 }
 
-export function filterUsers(filter) {
+export function filterUsers(filterName) {
     const action = {
         type: 'FILTER_USERS',
-        filter: filter
+        filterName: filterName
     };
     return action;
 }
 
+export function updateCurrentName(name) {
+    const action = {
+        type: 'UPDATE_CURRENT_NAME',
+        name: name
+    };
+    return action;
+}

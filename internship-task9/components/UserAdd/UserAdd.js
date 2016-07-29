@@ -4,24 +4,23 @@ import './UserAdd.css';
 class UserAdd extends Component {
     constructor(props) {
         super(props);
+        this.addUser = this.props.addUser.bind(this);
+        this.updateCurrentName = this.props.updateCurrentName.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
-        const currentInputValue = this.refs.UserAddInput.value.trim();
-        if (currentInputValue) {
-            this.props.onClick({
-                name: currentInputValue,
-                id: Date.now()
-            });
-        }
-        this.refs.UserAddInput.value = '';
+    handleClick(e) {
+        const nameInput = e.target.previousSibling;
+        nameInput.value = '';
+        this.addUser();
     }
 
     render() {
         return (
             <div className='user-add'>
-                <input type='text' placeholder='Enter user name' ref='UserAddInput'></input>
+                <input type='text' placeholder='Enter user name' onChange={
+                        (e) => {this.updateCurrentName(e.target.value);}
+                    }></input>
                 <button type='submit' onClick={this.handleClick}>ADD USER</button>
             </div>
         );

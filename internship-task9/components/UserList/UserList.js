@@ -2,48 +2,33 @@ import React, { Component } from 'react';
 import './UserList.css';
 import UserAdd from '../UserAdd/UserAdd.js';
 import UserItem from '../UserItem/UserItem.js';
+import UserFilter from '../UserFilter/UserFilter.js';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as actions from "../actions/userListActions";
+import * as actions from "../../actions/userListActions";
 
 class UserList extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-          users: [{
-              name: 'Default User',
-              id: Date.now()
-          }],
-          currentName: ''
-        };
-        this.addUser = this.addUser.bind(this);
-        this.deleteUser = this.deleteUser.bind(this);
+        this.addUser = this.props.addUser.bind(this);
+        this.deleteUser = this.props.deleteUser.bind(this);
+        this.filterUsers = this.props.filterUsers.bind(this);
+        this.updateCurrentName = this.props.updateCurrentName.bind(this);
+        this.renderUsers = this.renderUsers.bind(this);
     }
 
-   addUser(user) {
-        console.log('adding user', user, this);
-        const users = [...this.state.users];
-        users.push(user);
-        this.setState({
-            users
-        });
-    }
 
-    deleteUser(user) {
-        console.log('deleting user', user, this);
-        const users = [...this.state.users];
-        const deleteIndex = users.findIndex((item) => {
-            return (item.id === user.id);
+    renderUsers(state) {
+        const { filterName, users } = state;
+        const filteredUsers = users.filter((item) => {
+            return ((item.name || '').indexOf(filterName) > -1);
         });
-        users.splice(deleteIndex, 1);
-        this.setState({
-            users
+        return filteredUsers.map((item, index) => {
+            return (
+                    <UserItem key={index} user={item} deleteUser={this.deleteUser}></UserItem>
+                );
         });
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return (this.state.users.length !== nextState.users.length);
     }
 
     render() {
@@ -54,19 +39,27 @@ class UserList extends Component {
                 </div>
                 <div className='users-body'>
                     <ul className='user-left'>
-                        {
-                            this.state.users.map((item, index) => {
-                                return (
-                                    <UserItem key={index} user={item} deleteUser={this.deleteUser}></UserItem>
-                                );
-                            })
-                        }
+                        { this.renderUsers(this.props.stateFromReducer) }
                     </ul>
-                    <UserAdd className='user-right' onClick={this.addUser}></UserAdd>
+                    <div className='user-right'>
+                        <UserAdd addUser={this.addUser} updateCurrentName={this.updateCurrentName}></UserAdd>
+                        <UserFilter filterUsers={this.filterUsers}></UserFilter>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
-export default UserList;
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(actions, dispatch);
+}
+
+function mapStateToProps(state) {
+    return {
+        stateFromReducer: state
+    };
+}
+
+const UserListConnected = connect(mapStateToProps, mapDispatchToProps)(UserList);
+export default UserListConnected;
